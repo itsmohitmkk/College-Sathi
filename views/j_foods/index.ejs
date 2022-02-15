@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<% if(currentUser && currentUser.isAdmin){ %>
+    <h1>Logged in as Admin</h1>
+<% } %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1><i class="fa fa-pencil" aria-hidden="true"></i> Welcome To Get Your College!</h1>
+            <p>A place for people to share about their college experiences</p>
+            <p>
+             <a  class="btn btn-primary btn-lg" href="/j_foods/new">Add a new entry</a>   
+            </p>
+        </div>
+    </header>
+    
+        <div class="row" style="display:flex; flex-wrap: wrap">
+            <% j_foods.forEach(function(j_food){%>
+                <div class="col-lg-7 col-md-7 col-sm-7 col-centered">
+                    <div class="thumbnail" style="height:500px">
+                         <img style="height:300px"src="<%= j_food.image %>">
+                         <div class="caption">
+                            <h4><%= j_food.name %></h4>
+                         </div>
+                         <p>
+                             <a href="/j_foods/<%= j_food._id%>" class="btn btn-primary">More Info</a></a>
+                         </p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+</div>
+
+<% include ../partials/footer %>
+
+
+

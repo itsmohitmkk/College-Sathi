@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div col-lg-12 col-md-12 col-sm-12>
+            <h1 style="text-align:center;">Create a New Post</h1>
+            <div style="width:30%; margin:25px auto;">
+                <form action="/j_foods" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="j_food[name]">Name</label>
+                        <input class="form-control" type="text" name="j_food[name]" placeholder="name" required>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="image">Image</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="j_food[description">Description</label>
+                        <input class="form-control" type="text" name="j_food[description]" placeholder="description" required>
+                    </div>
+                    <div class="form-group"> 
+                        <label for="price">Rating</label>
+                        <input class="form-control" type="number" name="j_food[price]" placeholder="Rating" min="1" step="1" max="5" required>
+                    </div>
+                    <div class="form-group"> 
+                   <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+                <a href="/j_foods" class="btn btn-xs btn-warning">Go Back</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>
