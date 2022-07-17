@@ -32,7 +32,7 @@ Images are hosted on cloudinary, and database used for other storage is MongoDB.
 
 * npm install
 * Add Environment variables in cloud_name: 'dq7ompbph',
-    api_key: 'API KEY',
+    api_key: 'API  ',
     api_secret: 'API SECRECT'
 * npm start
 * Open https://localhost:3000 on your browser
